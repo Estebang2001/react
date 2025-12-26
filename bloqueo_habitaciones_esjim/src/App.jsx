@@ -13,14 +13,15 @@ function App() {
   return (
     <section className='App'>
       {
-        habitaciones.map(({ id, nombre, precio, disponibilidad, descripcion, checkDisponibilidad}) => (
+        habitaciones.map(({ id, nombre, precio, disponibilidad, descripcion }) => (
           <FichaHabitacion
             key={id}
             nombre={nombre}
             precio={precio}
             // TODO : Agregar logica de separación de habitaciones
           >
-            {descripcion}
+            <button onClick={actualizacionDisponibilidad(disponibilidad)}>{checkDisponibilidad(disponibilidad)}</button>
+            <p>{descripcion}</p>
           </FichaHabitacion>
         ))
       }
