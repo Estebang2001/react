@@ -1,0 +1,135 @@
+:root {
+    --primary-green: #74B495;
+    --secondary-green: #A8C898;
+    --cream: #F5E7C5;
+    --dark-text: #2c3e50;
+    --light-text: #64748b;
+    --white: #ffffff;
+    --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: #f8fafc;
+    color: var(--dark-text);
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.App {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+/* RoomCard Component Styles */
+.aj-hotelCard {
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.aj-hotelCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.aj-hotelTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+    letter-spacing: -0.025em;
+}
+
+.aj-hotelPrice {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.aj-hotelLocation {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.aj-hotelLocation::before {
+    content: '📍';
+    font-size: 1rem;
+}
+
+.aj-hotelAvailable {
+    display: inline-block;
+    background-color: var(--cream);
+    color: #8a7a5a;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Children content styling */
+.aj-hotelCard>div,
+.aj-hotelCard>p:not([class^="aj-"]) {
+    color: var(--light-text);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Favorite Button */
+.aj-favoriteCard-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f1f5f9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.aj-favoriteCard-button:hover {
+    background-color: var(--cream);
+    transform: scale(1.1);
+}
+
+.aj-favoriteCard-button.is-following {
+    background-color: var(--secondary-green);
+    box-shadow: 0 4px 12px rgba(168, 200, 152, 0.4);
+}
+
+.aj-favoriteCard-text {
+    line-height: 1;
+    display: block;
+}
