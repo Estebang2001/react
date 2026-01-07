@@ -1,5 +1,5 @@
 
-export const FichaHabitacion = ({index, children, nombre, precio, disponibilidad, actualizacionDisponibilidad}) => {
+export const FichaHabitacion = ({ index, children, nombre, precio, disponibilidad, actualizacionDisponibilidad }) => {
     const handleClick = () => {
         actualizacionDisponibilidad(index)
     }

@@ -5,14 +5,14 @@ export const listado_habitaciones = [
         id: 1,
         nombre: "Habitación compartida",
         precio: "500.000",
-        disponibilidad: estado_habitaciones.RESERVADO,
+        disponibilidad: estado_habitaciones.DISPONIBLE,
         descripcion: "Habitación con lindas vistas, cerca a la escuela de la policía"
     },
     {
         id: 2,
         nombre: "Suite Ejecutiva",
         precio: "850.000",
-        disponibilidad: estado_habitaciones.OCUPADO,
+        disponibilidad: estado_habitaciones.DISPONIBLE,
         descripcion: "Suite amplia con escritorio y wifi de alta velocidad"
     },
     {
@@ -26,21 +26,21 @@ export const listado_habitaciones = [
         id: 4,
         nombre: "Apartamento Estudio",
         precio: "650.000",
-        disponibilidad: estado_habitaciones.RESERVADO,
+        disponibilidad: estado_habitaciones.DISPONIBLE,
         descripcion: "Incluye cocina pequeña y baño privado"
     },
     {
         id: 5,
         nombre: "Habitación Familiar",
         precio: "900.000",
-        disponibilidad: estado_habitaciones.OCUPADO,
+        disponibilidad: estado_habitaciones.DISPONIBLE,
         descripcion: "Dos camas dobles y balcón con vista al parque"
     },
     {
         id: 6,
         nombre: "Ático Moderno",
         precio: "1.200.000",
-        disponibilidad: estado_habitaciones.RESERVADO,
+        disponibilidad: estado_habitaciones.DISPONIBLE,
         descripcion: "Diseño contemporáneo con terraza privada"
     }
 ];
